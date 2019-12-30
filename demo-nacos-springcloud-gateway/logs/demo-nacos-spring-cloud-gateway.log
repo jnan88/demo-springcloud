@@ -1,0 +1,354 @@
+2019-12-30 18:50:14:863 INFO  [restartedMain]:679  com.intbee.demo.nacos.gateway.DemoNacosGatewayApplication The following profiles are active: dev 
+2019-12-30 18:50:16:472 INFO  [restartedMain]:63   com.intbee.demo.nacos.gateway.filter.JwtGatewayFilterFactory Loaded JwtGatewayFilterFactory [Authorize] 
+2019-12-30 18:50:16:489 INFO  [restartedMain]:54   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos dynamicRouteByNacosListener:{gateway-data-id},DEFAULT_GROUP 
+2019-12-30 18:50:16:520 INFO  [restartedMain]:126  com.netflix.config.sources.URLConfigurationSource URLs to be used as dynamic configuration source: [file:/Volumes/opt/workspace/example/example-springcloud-nacos/demo-nacos-spring-cloud-gateway/target/classes/config.properties] 
+2019-12-30 18:50:16:530 INFO  [restartedMain]:126  com.netflix.config.sources.URLConfigurationSource URLs to be used as dynamic configuration source: [file:/Volumes/opt/workspace/example/example-springcloud-nacos/demo-nacos-spring-cloud-gateway/target/classes/config.properties] 
+2019-12-30 18:50:18:570 INFO  [restartedMain]:59   com.intbee.demo.nacos.gateway.DemoNacosGatewayApplication Started DemoNacosGatewayApplication in 4.945 seconds (JVM running for 5.401) 
+2019-12-30 18:53:48:656 INFO  [restartedMain]:679  com.intbee.demo.nacos.gateway.DemoNacosGatewayApplication The following profiles are active: dev 
+2019-12-30 18:53:48:967 INFO  [restartedMain]:63   com.intbee.demo.nacos.gateway.filter.JwtGatewayFilterFactory Loaded JwtGatewayFilterFactory [Authorize] 
+2019-12-30 18:53:57:578 INFO  [restartedMain]:679  com.intbee.demo.nacos.gateway.DemoNacosGatewayApplication The following profiles are active: dev 
+2019-12-30 18:53:57:927 INFO  [restartedMain]:63   com.intbee.demo.nacos.gateway.filter.JwtGatewayFilterFactory Loaded JwtGatewayFilterFactory [Authorize] 
+2019-12-30 18:53:57:935 INFO  [restartedMain]:54   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos dynamicRouteByNacosListener:sc-gateway.yml,DEFAULT_GROUP 
+2019-12-30 18:53:57:940 INFO  [restartedMain]:126  com.netflix.config.sources.URLConfigurationSource URLs to be used as dynamic configuration source: [file:/Volumes/opt/workspace/example/example-springcloud-nacos/demo-nacos-spring-cloud-gateway/target/classes/config.properties] 
+2019-12-30 18:53:58:336 INFO  [restartedMain]:59   com.intbee.demo.nacos.gateway.DemoNacosGatewayApplication Started DemoNacosGatewayApplication in 0.875 seconds (JVM running for 225.174) 
+2019-12-30 18:55:48:775 INFO  [restartedMain]:679  com.intbee.demo.nacos.gateway.DemoNacosGatewayApplication The following profiles are active: dev 
+2019-12-30 18:55:49:066 INFO  [restartedMain]:63   com.intbee.demo.nacos.gateway.filter.JwtGatewayFilterFactory Loaded JwtGatewayFilterFactory [Authorize] 
+2019-12-30 18:55:49:072 INFO  [restartedMain]:54   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos dynamicRouteByNacosListener:intbee-api-gateway.yml,DEFAULT_GROUP 
+2019-12-30 18:55:49:076 INFO  [restartedMain]:126  com.netflix.config.sources.URLConfigurationSource URLs to be used as dynamic configuration source: [file:/Volumes/opt/workspace/example/example-springcloud-nacos/demo-nacos-spring-cloud-gateway/target/classes/config.properties] 
+2019-12-30 18:55:49:405 INFO  [restartedMain]:59   com.intbee.demo.nacos.gateway.DemoNacosGatewayApplication Started DemoNacosGatewayApplication in 1.561 seconds (JVM running for 336.247) 
+2019-12-30 18:56:09:236 INFO  [restartedMain]:679  com.intbee.demo.nacos.gateway.DemoNacosGatewayApplication The following profiles are active: dev 
+2019-12-30 18:56:09:487 INFO  [restartedMain]:63   com.intbee.demo.nacos.gateway.filter.JwtGatewayFilterFactory Loaded JwtGatewayFilterFactory [Authorize] 
+2019-12-30 18:56:09:492 INFO  [restartedMain]:54   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos dynamicRouteByNacosListener:intbee-api-gateway.yml,DEFAULT_GROUP 
+2019-12-30 18:56:09:493 INFO  [restartedMain]:65   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos dynamicRouteByNacosListener:intbee-api-gateway.yml,DEFAULT_GROUP 
+2019-12-30 18:56:09:501 INFO  [restartedMain]:69   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos Nacos Routes =[{
+    "filters": [{"name":"Jwt","args": {
+            "appKey":"appKey",
+            "appSecret":"appSecret"
+        }}],
+    "id": "jd_route",
+    "order": 0,
+    "predicates": [{
+        "args": {
+            "pattern": "/jd1"
+        },
+        "name": "Path"
+    }],
+    "uri": "http://www.jd.com"
+},
+{
+    "filters": [],
+    "id": "intbee_route",
+    "order": 0,
+    "predicates": [{
+        "args": {
+            "pattern": "/intbee"
+        },
+        "name": "Path"
+    }],
+    "uri": "demo-nacos-provider"
+}
+] 
+2019-12-30 18:56:09:515 INFO  [restartedMain]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : jd_route 
+2019-12-30 18:56:09:515 INFO  [restartedMain]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='jd_route', predicates=[PredicateDefinition{name='Path', args={pattern=/jd1}}], filters=[FilterDefinition{name='Jwt', args={appKey=appKey, appSecret=appSecret}}], uri=http://www.jd.com, order=0} 
+2019-12-30 18:56:09:532 INFO  [restartedMain]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : intbee_route 
+2019-12-30 18:56:09:532 INFO  [restartedMain]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='intbee_route', predicates=[PredicateDefinition{name='Path', args={pattern=/intbee}}], filters=[], uri=demo-nacos-provider, order=0} 
+2019-12-30 18:56:09:536 INFO  [restartedMain]:126  com.netflix.config.sources.URLConfigurationSource URLs to be used as dynamic configuration source: [file:/Volumes/opt/workspace/example/example-springcloud-nacos/demo-nacos-spring-cloud-gateway/target/classes/config.properties] 
+2019-12-30 18:56:09:834 INFO  [restartedMain]:59   com.intbee.demo.nacos.gateway.DemoNacosGatewayApplication Started DemoNacosGatewayApplication in 0.701 seconds (JVM running for 356.676) 
+2019-12-30 18:56:41:906 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : jd_route 
+2019-12-30 18:56:41:907 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='jd_route', predicates=[PredicateDefinition{name='Path', args={pattern=/jd1}}], filters=[FilterDefinition{name='Jwt', args={appKey=appKey, appSecret=appSecret}}], uri=http://www.jd.com, order=0} 
+2019-12-30 18:56:41:908 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : intbee_route 
+2019-12-30 18:56:41:908 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='intbee_route', predicates=[PredicateDefinition{name='Path', args={pattern=/intbee}}], filters=[], uri=//demo-nacos-provider, order=0} 
+2019-12-30 18:59:28:334 INFO  [restartedMain]:679  com.intbee.demo.nacos.gateway.DemoNacosGatewayApplication The following profiles are active: dev 
+2019-12-30 18:59:28:637 INFO  [restartedMain]:63   com.intbee.demo.nacos.gateway.filter.JwtGatewayFilterFactory Loaded JwtGatewayFilterFactory [Authorize] 
+2019-12-30 18:59:28:647 INFO  [restartedMain]:54   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos dynamicRouteByNacosListener:intbee-api-gateway.yml,DEFAULT_GROUP 
+2019-12-30 18:59:28:647 INFO  [restartedMain]:65   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos dynamicRouteByNacosListener:intbee-api-gateway.yml,DEFAULT_GROUP 
+2019-12-30 18:59:28:657 INFO  [restartedMain]:69   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos Nacos Routes =[{
+    "filters": [{"name":"Jwt","args": {
+            "appKey":"appKey",
+            "appSecret":"appSecret"
+        }}],
+    "id": "jd_route",
+    "order": 0,
+    "predicates": [{
+        "args": {
+            "pattern": "/jd1"
+        },
+        "name": "Path"
+    }],
+    "uri": "http://www.jd.com"
+},
+{
+    "filters": [],
+    "id": "intbee_route",
+    "order": 0,
+    "predicates": [{
+        "args": {
+            "pattern": "/intbee"
+        },
+        "name": "Path"
+    }],
+    "uri": "//demo-nacos-provider"
+}
+] 
+2019-12-30 18:59:28:659 INFO  [restartedMain]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : jd_route 
+2019-12-30 18:59:28:659 INFO  [restartedMain]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='jd_route', predicates=[PredicateDefinition{name='Path', args={pattern=/jd1}}], filters=[FilterDefinition{name='Jwt', args={appKey=appKey, appSecret=appSecret}}], uri=http://www.jd.com, order=0} 
+2019-12-30 18:59:28:675 INFO  [restartedMain]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : intbee_route 
+2019-12-30 18:59:28:676 INFO  [restartedMain]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='intbee_route', predicates=[PredicateDefinition{name='Path', args={pattern=/intbee}}], filters=[], uri=//demo-nacos-provider, order=0} 
+2019-12-30 18:59:28:680 INFO  [restartedMain]:126  com.netflix.config.sources.URLConfigurationSource URLs to be used as dynamic configuration source: [file:/Volumes/opt/workspace/example/example-springcloud-nacos/demo-nacos-spring-cloud-gateway/target/classes/config.properties] 
+2019-12-30 18:59:28:982 INFO  [restartedMain]:59   com.intbee.demo.nacos.gateway.DemoNacosGatewayApplication Started DemoNacosGatewayApplication in 0.938 seconds (JVM running for 555.832) 
+2019-12-30 18:59:37:538 INFO  [restartedMain]:679  com.intbee.demo.nacos.gateway.DemoNacosGatewayApplication The following profiles are active: dev 
+2019-12-30 18:59:38:679 INFO  [restartedMain]:63   com.intbee.demo.nacos.gateway.filter.JwtGatewayFilterFactory Loaded JwtGatewayFilterFactory [Authorize] 
+2019-12-30 18:59:38:694 INFO  [restartedMain]:54   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos dynamicRouteByNacosListener:intbee-api-gateway.yml,DEFAULT_GROUP 
+2019-12-30 18:59:38:694 INFO  [restartedMain]:65   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos dynamicRouteByNacosListener:intbee-api-gateway.yml,DEFAULT_GROUP 
+2019-12-30 18:59:38:707 INFO  [restartedMain]:69   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos Nacos Routes =[{
+    "filters": [{"name":"Jwt","args": {
+            "appKey":"appKey",
+            "appSecret":"appSecret"
+        }}],
+    "id": "jd_route",
+    "order": 0,
+    "predicates": [{
+        "args": {
+            "pattern": "/jd1"
+        },
+        "name": "Path"
+    }],
+    "uri": "http://www.jd.com"
+},
+{
+    "filters": [],
+    "id": "intbee_route",
+    "order": 0,
+    "predicates": [{
+        "args": {
+            "pattern": "/intbee"
+        },
+        "name": "Path"
+    }],
+    "uri": "//demo-nacos-provider"
+}
+] 
+2019-12-30 18:59:38:781 INFO  [restartedMain]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : jd_route 
+2019-12-30 18:59:38:906 INFO  [restartedMain]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='jd_route', predicates=[PredicateDefinition{name='Path', args={pattern=/jd1}}], filters=[FilterDefinition{name='Jwt', args={appKey=appKey, appSecret=appSecret}}], uri=http://www.jd.com, order=0} 
+2019-12-30 18:59:39:033 INFO  [restartedMain]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : intbee_route 
+2019-12-30 18:59:39:033 INFO  [restartedMain]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='intbee_route', predicates=[PredicateDefinition{name='Path', args={pattern=/intbee}}], filters=[], uri=//demo-nacos-provider, order=0} 
+2019-12-30 18:59:39:058 INFO  [restartedMain]:126  com.netflix.config.sources.URLConfigurationSource URLs to be used as dynamic configuration source: [file:/Volumes/opt/workspace/example/example-springcloud-nacos/demo-nacos-spring-cloud-gateway/target/classes/config.properties] 
+2019-12-30 18:59:39:066 INFO  [restartedMain]:126  com.netflix.config.sources.URLConfigurationSource URLs to be used as dynamic configuration source: [file:/Volumes/opt/workspace/example/example-springcloud-nacos/demo-nacos-spring-cloud-gateway/target/classes/config.properties] 
+2019-12-30 18:59:40:526 INFO  [restartedMain]:59   com.intbee.demo.nacos.gateway.DemoNacosGatewayApplication Started DemoNacosGatewayApplication in 4.049 seconds (JVM running for 4.536) 
+2019-12-30 19:00:01:990 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : jd_route 
+2019-12-30 19:00:01:990 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='jd_route', predicates=[PredicateDefinition{name='Path', args={pattern=/jd1}}], filters=[FilterDefinition{name='Jwt', args={appKey=appKey, appSecret=appSecret}}], uri=http://www.jd.com, order=0} 
+2019-12-30 19:00:01:991 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : intbee_route 
+2019-12-30 19:00:01:992 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='intbee_route', predicates=[PredicateDefinition{name='Path', args={pattern=/intbee}}], filters=[], uri=demo-nacos-provider, order=0} 
+2019-12-30 19:01:05:056 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : jd_route 
+2019-12-30 19:01:05:056 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='jd_route', predicates=[PredicateDefinition{name='Path', args={pattern=/jd1}}], filters=[FilterDefinition{name='Jwt', args={appKey=appKey, appSecret=appSecret}}], uri=http://www.jd.com, order=0} 
+2019-12-30 19:01:05:057 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : intbee_route 
+2019-12-30 19:01:05:057 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='intbee_route', predicates=[PredicateDefinition{name='Path', args={pattern=/intbee}}], filters=[], uri=lb://demo-nacos-provider, order=0} 
+2019-12-30 19:01:38:344 INFO  [reactor-http-nio-2]:115  com.netflix.config.ChainedDynamicProperty Flipping property: demo-nacos-provider.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647 
+2019-12-30 19:01:38:364 INFO  [reactor-http-nio-2]:197  com.netflix.loadbalancer.BaseLoadBalancer Client: demo-nacos-provider instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=demo-nacos-provider,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null 
+2019-12-30 19:01:38:372 INFO  [reactor-http-nio-2]:222  com.netflix.loadbalancer.DynamicServerListLoadBalancer Using serverListUpdater PollingServerListUpdater 
+2019-12-30 19:01:38:383 INFO  [reactor-http-nio-2]:115  com.netflix.config.ChainedDynamicProperty Flipping property: demo-nacos-provider.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647 
+2019-12-30 19:01:38:388 INFO  [reactor-http-nio-2]:150  com.netflix.loadbalancer.DynamicServerListLoadBalancer DynamicServerListLoadBalancer for client demo-nacos-provider initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=demo-nacos-provider,current list of Servers=[10.0.1.103:8020],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:10.0.1.103:8020;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@4ec6fa70 
+2019-12-30 19:01:39:380 INFO  [PollingServerListUpdater-0]:115  com.netflix.config.ChainedDynamicProperty Flipping property: demo-nacos-provider.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647 
+2019-12-30 19:05:53:182 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : jd_route 
+2019-12-30 19:05:53:182 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='jd_route', predicates=[PredicateDefinition{name='Path', args={pattern=/jd1}}], filters=[FilterDefinition{name='Jwt', args={appKey=appKey, appSecret=appSecret}}], uri=http://www.jd.com, order=0} 
+2019-12-30 19:05:53:183 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : intbee_route 
+2019-12-30 19:05:53:183 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='intbee_route', predicates=[PredicateDefinition{name='Path', args={path=/ip/**}}], filters=[FilterDefinition{name='null', args={}}], uri=lb://demo-nacos-provider, order=0} 
+2019-12-30 19:06:05:333 INFO  [restartedMain]:679  com.intbee.demo.nacos.gateway.DemoNacosGatewayApplication The following profiles are active: dev 
+2019-12-30 19:06:05:641 INFO  [restartedMain]:63   com.intbee.demo.nacos.gateway.filter.JwtGatewayFilterFactory Loaded JwtGatewayFilterFactory [Authorize] 
+2019-12-30 19:06:05:648 INFO  [restartedMain]:54   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos dynamicRouteByNacosListener:intbee-api-gateway.yml,DEFAULT_GROUP 
+2019-12-30 19:06:05:648 INFO  [restartedMain]:65   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos dynamicRouteByNacosListener:intbee-api-gateway.yml,DEFAULT_GROUP 
+2019-12-30 19:06:05:655 INFO  [restartedMain]:69   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos Nacos Routes =[{
+    "filters": [{"name":"Jwt","args": {
+            "appKey":"appKey",
+            "appSecret":"appSecret"
+        }}],
+    "id": "jd_route",
+    "order": 0,
+    "predicates": [{
+        "args": {
+            "pattern": "/jd1"
+        },
+        "name": "Path"
+    }],
+    "uri": "http://www.jd.com"
+},
+{
+    "filters": [{"StripPrefix":1}],
+    "id": "intbee_route",
+    "order": 0,
+    "predicates": [{
+        "args": {
+            "path":"/ip/**"
+        },
+        "name": "Path"
+    }],
+    "uri": "lb://demo-nacos-provider"
+}
+] 
+2019-12-30 19:06:05:657 INFO  [restartedMain]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : jd_route 
+2019-12-30 19:06:05:657 INFO  [restartedMain]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='jd_route', predicates=[PredicateDefinition{name='Path', args={pattern=/jd1}}], filters=[FilterDefinition{name='Jwt', args={appKey=appKey, appSecret=appSecret}}], uri=http://www.jd.com, order=0} 
+2019-12-30 19:06:05:673 INFO  [restartedMain]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : intbee_route 
+2019-12-30 19:06:05:673 INFO  [restartedMain]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='intbee_route', predicates=[PredicateDefinition{name='Path', args={path=/ip/**}}], filters=[FilterDefinition{name='null', args={}}], uri=lb://demo-nacos-provider, order=0} 
+2019-12-30 19:06:05:677 INFO  [restartedMain]:126  com.netflix.config.sources.URLConfigurationSource URLs to be used as dynamic configuration source: [file:/Volumes/opt/workspace/example/example-springcloud-nacos/demo-nacos-spring-cloud-gateway/target/classes/config.properties] 
+2019-12-30 19:06:06:197 INFO  [restartedMain]:59   com.intbee.demo.nacos.gateway.DemoNacosGatewayApplication Started DemoNacosGatewayApplication in 1.125 seconds (JVM running for 390.218) 
+2019-12-30 19:06:25:065 INFO  [restartedMain]:679  com.intbee.demo.nacos.gateway.DemoNacosGatewayApplication The following profiles are active: dev 
+2019-12-30 19:06:25:352 INFO  [restartedMain]:63   com.intbee.demo.nacos.gateway.filter.JwtGatewayFilterFactory Loaded JwtGatewayFilterFactory [Authorize] 
+2019-12-30 19:06:25:359 INFO  [restartedMain]:54   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos dynamicRouteByNacosListener:intbee-api-gateway.yml,DEFAULT_GROUP 
+2019-12-30 19:06:25:360 INFO  [restartedMain]:65   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos dynamicRouteByNacosListener:intbee-api-gateway.yml,DEFAULT_GROUP 
+2019-12-30 19:06:25:367 INFO  [restartedMain]:69   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos Nacos Routes =[{
+    "filters": [{"name":"Jwt","args": {
+            "appKey":"appKey",
+            "appSecret":"appSecret"
+        }}],
+    "id": "jd_route",
+    "order": 0,
+    "predicates": [{
+        "args": {
+            "pattern": "/jd1"
+        },
+        "name": "Path"
+    }],
+    "uri": "http://www.jd.com"
+},
+{
+    "filters": [{"StripPrefix":1}],
+    "id": "intbee_route",
+    "order": 0,
+    "predicates": [{
+        "args": {
+            "path":"/ip/**"
+        },
+        "name": "Path"
+    }],
+    "uri": "lb://demo-nacos-provider"
+}
+] 
+2019-12-30 19:06:25:368 INFO  [restartedMain]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : jd_route 
+2019-12-30 19:06:25:368 INFO  [restartedMain]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='jd_route', predicates=[PredicateDefinition{name='Path', args={pattern=/jd1}}], filters=[FilterDefinition{name='Jwt', args={appKey=appKey, appSecret=appSecret}}], uri=http://www.jd.com, order=0} 
+2019-12-30 19:06:25:385 INFO  [restartedMain]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : intbee_route 
+2019-12-30 19:06:25:385 INFO  [restartedMain]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='intbee_route', predicates=[PredicateDefinition{name='Path', args={path=/ip/**}}], filters=[FilterDefinition{name='null', args={}}], uri=lb://demo-nacos-provider, order=0} 
+2019-12-30 19:06:25:389 INFO  [restartedMain]:126  com.netflix.config.sources.URLConfigurationSource URLs to be used as dynamic configuration source: [file:/Volumes/opt/workspace/example/example-springcloud-nacos/demo-nacos-spring-cloud-gateway/target/classes/config.properties] 
+2019-12-30 19:06:25:698 INFO  [restartedMain]:59   com.intbee.demo.nacos.gateway.DemoNacosGatewayApplication Started DemoNacosGatewayApplication in 0.75 seconds (JVM running for 409.72) 
+2019-12-30 19:06:53:610 INFO  [restartedMain]:679  com.intbee.demo.nacos.gateway.DemoNacosGatewayApplication The following profiles are active: dev 
+2019-12-30 19:06:53:862 INFO  [restartedMain]:63   com.intbee.demo.nacos.gateway.filter.JwtGatewayFilterFactory Loaded JwtGatewayFilterFactory [Authorize] 
+2019-12-30 19:06:53:868 INFO  [restartedMain]:54   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos dynamicRouteByNacosListener:intbee-api-gateway.yml,DEFAULT_GROUP 
+2019-12-30 19:06:53:868 INFO  [restartedMain]:65   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos dynamicRouteByNacosListener:intbee-api-gateway.yml,DEFAULT_GROUP 
+2019-12-30 19:06:53:875 INFO  [restartedMain]:69   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos Nacos Routes =[{
+    "filters": [{"name":"Jwt","args": {
+            "appKey":"appKey",
+            "appSecret":"appSecret"
+        }}],
+    "id": "jd_route",
+    "order": 0,
+    "predicates": [{
+        "args": {
+            "pattern": "/jd1"
+        },
+        "name": "Path"
+    }],
+    "uri": "http://www.jd.com"
+},
+{
+    "filters": [{"StripPrefix":1}],
+    "id": "intbee_route",
+    "order": 0,
+    "predicates": [{
+        "args": {
+            "path":"/ip/**"
+        },
+        "name": "Path"
+    }],
+    "uri": "lb://demo-nacos-provider"
+}
+] 
+2019-12-30 19:06:53:877 INFO  [restartedMain]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : jd_route 
+2019-12-30 19:06:53:877 INFO  [restartedMain]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='jd_route', predicates=[PredicateDefinition{name='Path', args={pattern=/jd1}}], filters=[FilterDefinition{name='Jwt', args={appKey=appKey, appSecret=appSecret}}], uri=http://www.jd.com, order=0} 
+2019-12-30 19:06:53:891 INFO  [restartedMain]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : intbee_route 
+2019-12-30 19:06:53:891 INFO  [restartedMain]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='intbee_route', predicates=[PredicateDefinition{name='Path', args={path=/ip/**}}], filters=[FilterDefinition{name='null', args={}}], uri=lb://demo-nacos-provider, order=0} 
+2019-12-30 19:06:53:894 INFO  [restartedMain]:126  com.netflix.config.sources.URLConfigurationSource URLs to be used as dynamic configuration source: [file:/Volumes/opt/workspace/example/example-springcloud-nacos/demo-nacos-spring-cloud-gateway/target/classes/config.properties] 
+2019-12-30 19:06:54:174 INFO  [restartedMain]:59   com.intbee.demo.nacos.gateway.DemoNacosGatewayApplication Started DemoNacosGatewayApplication in 0.677 seconds (JVM running for 438.197) 
+2019-12-30 19:07:20:322 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : jd_route 
+2019-12-30 19:07:20:325 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='jd_route', predicates=[PredicateDefinition{name='Path', args={pattern=/jd1}}], filters=[FilterDefinition{name='Jwt', args={appKey=appKey, appSecret=appSecret}}], uri=http://www.jd.com, order=0} 
+2019-12-30 19:07:20:327 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : intbee_route 
+2019-12-30 19:07:20:327 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='intbee_route', predicates=[PredicateDefinition{name='Path', args={path=/ip/**}}], filters=[], uri=lb://demo-nacos-provider, order=0} 
+2019-12-30 19:07:20:328 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : jd_route 
+2019-12-30 19:07:20:328 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='jd_route', predicates=[PredicateDefinition{name='Path', args={pattern=/jd1}}], filters=[FilterDefinition{name='Jwt', args={appKey=appKey, appSecret=appSecret}}], uri=http://www.jd.com, order=0} 
+2019-12-30 19:07:20:329 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : intbee_route 
+2019-12-30 19:07:20:329 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='intbee_route', predicates=[PredicateDefinition{name='Path', args={path=/ip/**}}], filters=[], uri=lb://demo-nacos-provider, order=0} 
+2019-12-30 19:07:20:331 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : jd_route 
+2019-12-30 19:07:20:331 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='jd_route', predicates=[PredicateDefinition{name='Path', args={pattern=/jd1}}], filters=[FilterDefinition{name='Jwt', args={appKey=appKey, appSecret=appSecret}}], uri=http://www.jd.com, order=0} 
+2019-12-30 19:07:20:331 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : intbee_route 
+2019-12-30 19:07:20:332 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='intbee_route', predicates=[PredicateDefinition{name='Path', args={path=/ip/**}}], filters=[], uri=lb://demo-nacos-provider, order=0} 
+2019-12-30 19:07:20:333 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : jd_route 
+2019-12-30 19:07:20:333 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='jd_route', predicates=[PredicateDefinition{name='Path', args={pattern=/jd1}}], filters=[FilterDefinition{name='Jwt', args={appKey=appKey, appSecret=appSecret}}], uri=http://www.jd.com, order=0} 
+2019-12-30 19:07:20:333 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : intbee_route 
+2019-12-30 19:07:20:333 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='intbee_route', predicates=[PredicateDefinition{name='Path', args={path=/ip/**}}], filters=[], uri=lb://demo-nacos-provider, order=0} 
+2019-12-30 19:07:34:161 INFO  [restartedMain]:679  com.intbee.demo.nacos.gateway.DemoNacosGatewayApplication The following profiles are active: dev 
+2019-12-30 19:07:34:402 INFO  [restartedMain]:63   com.intbee.demo.nacos.gateway.filter.JwtGatewayFilterFactory Loaded JwtGatewayFilterFactory [Authorize] 
+2019-12-30 19:07:34:408 INFO  [restartedMain]:54   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos dynamicRouteByNacosListener:intbee-api-gateway.yml,DEFAULT_GROUP 
+2019-12-30 19:07:34:408 INFO  [restartedMain]:65   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos dynamicRouteByNacosListener:intbee-api-gateway.yml,DEFAULT_GROUP 
+2019-12-30 19:07:34:417 INFO  [restartedMain]:69   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImplByNacos Nacos Routes =[{
+    "filters": [{"name":"Jwt","args": {
+            "appKey":"appKey",
+            "appSecret":"appSecret"
+        }}],
+    "id": "jd_route",
+    "order": 0,
+    "predicates": [{
+        "args": {
+            "pattern": "/jd1"
+        },
+        "name": "Path"
+    }],
+    "uri": "http://www.jd.com"
+},
+{
+    "filters": [],
+    "id": "intbee_route",
+    "order": 0,
+    "predicates": [{
+        "args": {
+            "path":"/ip/**"
+        },
+        "name": "Path"
+    }],
+    "uri": "lb://demo-nacos-provider"
+}
+] 
+2019-12-30 19:07:34:418 INFO  [restartedMain]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : jd_route 
+2019-12-30 19:07:34:419 INFO  [restartedMain]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='jd_route', predicates=[PredicateDefinition{name='Path', args={pattern=/jd1}}], filters=[FilterDefinition{name='Jwt', args={appKey=appKey, appSecret=appSecret}}], uri=http://www.jd.com, order=0} 
+2019-12-30 19:07:34:432 INFO  [restartedMain]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : intbee_route 
+2019-12-30 19:07:34:433 INFO  [restartedMain]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='intbee_route', predicates=[PredicateDefinition{name='Path', args={path=/ip/**}}], filters=[], uri=lb://demo-nacos-provider, order=0} 
+2019-12-30 19:07:34:436 INFO  [restartedMain]:126  com.netflix.config.sources.URLConfigurationSource URLs to be used as dynamic configuration source: [file:/Volumes/opt/workspace/example/example-springcloud-nacos/demo-nacos-spring-cloud-gateway/target/classes/config.properties] 
+2019-12-30 19:07:34:703 INFO  [restartedMain]:59   com.intbee.demo.nacos.gateway.DemoNacosGatewayApplication Started DemoNacosGatewayApplication in 0.634 seconds (JVM running for 478.727) 
+2019-12-30 19:07:49:077 INFO  [reactor-http-nio-2]:115  com.netflix.config.ChainedDynamicProperty Flipping property: demo-nacos-provider.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647 
+2019-12-30 19:07:49:080 INFO  [reactor-http-nio-2]:197  com.netflix.loadbalancer.BaseLoadBalancer Client: demo-nacos-provider instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=demo-nacos-provider,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null 
+2019-12-30 19:07:49:081 INFO  [reactor-http-nio-2]:222  com.netflix.loadbalancer.DynamicServerListLoadBalancer Using serverListUpdater PollingServerListUpdater 
+2019-12-30 19:07:49:083 INFO  [reactor-http-nio-2]:115  com.netflix.config.ChainedDynamicProperty Flipping property: demo-nacos-provider.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647 
+2019-12-30 19:07:49:084 INFO  [reactor-http-nio-2]:150  com.netflix.loadbalancer.DynamicServerListLoadBalancer DynamicServerListLoadBalancer for client demo-nacos-provider initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=demo-nacos-provider,current list of Servers=[10.0.1.103:8020],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:10.0.1.103:8020;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@56d9558f 
+2019-12-30 19:07:50:087 INFO  [PollingServerListUpdater-1]:115  com.netflix.config.ChainedDynamicProperty Flipping property: demo-nacos-provider.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647 
+2019-12-30 19:14:49:533 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : jd_route 
+2019-12-30 19:14:49:534 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='jd_route', predicates=[PredicateDefinition{name='Path', args={pattern=/jd1}}], filters=[FilterDefinition{name='Jwt', args={appKey=appKey, appSecret=appSecret}}], uri=http://www.jd.com, order=0} 
+2019-12-30 19:14:49:534 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : intbee_route 
+2019-12-30 19:14:49:534 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='intbee_route', predicates=[PredicateDefinition{name='Path', args={path=/ip/**}}], filters=[FilterDefinition{name='RewritePath', args={regexp=/test, replacement=/ip/hi}}], uri=lb://demo-nacos-provider, order=0} 
+2019-12-30 19:14:49:535 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : jd_route 
+2019-12-30 19:14:49:536 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='jd_route', predicates=[PredicateDefinition{name='Path', args={pattern=/jd1}}], filters=[FilterDefinition{name='Jwt', args={appKey=appKey, appSecret=appSecret}}], uri=http://www.jd.com, order=0} 
+2019-12-30 19:14:49:536 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : intbee_route 
+2019-12-30 19:14:49:536 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='intbee_route', predicates=[PredicateDefinition{name='Path', args={path=/ip/**}}], filters=[FilterDefinition{name='RewritePath', args={regexp=/test, replacement=/ip/hi}}], uri=lb://demo-nacos-provider, order=0} 
+2019-12-30 19:14:49:537 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : jd_route 
+2019-12-30 19:14:49:537 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='jd_route', predicates=[PredicateDefinition{name='Path', args={pattern=/jd1}}], filters=[FilterDefinition{name='Jwt', args={appKey=appKey, appSecret=appSecret}}], uri=http://www.jd.com, order=0} 
+2019-12-30 19:14:49:537 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : intbee_route 
+2019-12-30 19:14:49:537 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='intbee_route', predicates=[PredicateDefinition{name='Path', args={path=/ip/**}}], filters=[FilterDefinition{name='RewritePath', args={regexp=/test, replacement=/ip/hi}}], uri=lb://demo-nacos-provider, order=0} 
+2019-12-30 19:14:49:538 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : jd_route 
+2019-12-30 19:14:49:538 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='jd_route', predicates=[PredicateDefinition{name='Path', args={pattern=/jd1}}], filters=[FilterDefinition{name='Jwt', args={appKey=appKey, appSecret=appSecret}}], uri=http://www.jd.com, order=0} 
+2019-12-30 19:14:49:538 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : intbee_route 
+2019-12-30 19:14:49:538 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='intbee_route', predicates=[PredicateDefinition{name='Path', args={path=/ip/**}}], filters=[FilterDefinition{name='RewritePath', args={regexp=/test, replacement=/ip/hi}}], uri=lb://demo-nacos-provider, order=0} 
+2019-12-30 19:14:49:540 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : jd_route 
+2019-12-30 19:14:49:540 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='jd_route', predicates=[PredicateDefinition{name='Path', args={pattern=/jd1}}], filters=[FilterDefinition{name='Jwt', args={appKey=appKey, appSecret=appSecret}}], uri=http://www.jd.com, order=0} 
+2019-12-30 19:14:49:540 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:57   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route delete : intbee_route 
+2019-12-30 19:14:49:541 INFO  [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-48f92022-c1b4-415d-9930-ff793e162e9c]:64   com.intbee.demo.nacos.gateway.route.DynamicRouteServiceImpl route save : RouteDefinition{id='intbee_route', predicates=[PredicateDefinition{name='Path', args={path=/ip/**}}], filters=[FilterDefinition{name='RewritePath', args={regexp=/test, replacement=/ip/hi}}], uri=lb://demo-nacos-provider, order=0} 
+2019-12-30 19:20:54:211 INFO  [Thread-35]:53   com.netflix.loadbalancer.PollingServerListUpdater Shutting down the Executor Pool for PollingServerListUpdater 
